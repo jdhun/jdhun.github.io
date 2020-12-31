@@ -6,7 +6,47 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 19:15:25 +0800</lastBuildDate><atom:link href="https://jdhun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 00:13:37 +0800</lastBuildDate><atom:link href="https://jdhun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Day Summary</title>
+      <link>https://jdhun.github.io/post/first-day-summary/</link>
+      <pubDate>Fri, 01 Jan 2021 00:13:37 +0800</pubDate>
+      
+      <guid>https://jdhun.github.io/post/first-day-summary/</guid>
+      <description>&lt;p&gt;启动 hugo 报错：&lt;/p&gt;
+&lt;p&gt;WARN 2018/11/23 14:56:39 Found no layout for &amp;ldquo;home&amp;rdquo;, language &amp;ldquo;en&amp;rdquo;, output format &amp;ldquo;HTML&amp;rdquo;: create a template below /layouts with one of these filenames: index.en.html.html, home.en.html.html, list.en.html.html, index.html.html, home.html.html, list.html.html, index.en.html, home.en.html, list.en.html, index.html, home.html, list.html, _default/index.en.html.html, _default/home.en.html.html, _default/list.en.html.html, _default/index.html.html, _default/home.html.html, _default/list.html.html, _default/index.en.html, _default/home.en.html, _default/list.en.html, _default/index.html, _default/home.html, _default/list.html&lt;/p&gt;
+&lt;p&gt;推测似乎原因是
+hugo 找不到适合 home 的模板，后面跟着的一大串文件名是 hugo 查找模板的顺序。如果是网上的写好的主题，是不是没有指定对主题的路径啊？
+主题文件夹放在./themes/里，然后./config.toml 加一句`theme = &amp;ldquo;主题名&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;————
+使用hugo-theme-stack主题是发生错误：
+Start building sites …
+ERROR 2020/12/31 17:56:03 render of &amp;ldquo;taxonomy&amp;rdquo; failed: execute of template failed: template: _default/list.html:4:12: executing &amp;ldquo;_default/list.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/head.html&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/head.html:14:4: executing &amp;ldquo;partials/head/head.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/opengraph/include.html&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/opengraph/include.html:1:3: executing &amp;ldquo;partials/head/opengraph/include.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/opengraph/provider/base&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/opengraph/provider/base.html:40:13: executing &amp;ldquo;partials/head/opengraph/provider/base.html&amp;rdquo; at &amp;lt;partialCached &amp;ldquo;helper/image&amp;rdquo; (dict &amp;ldquo;Context&amp;rdquo; . &amp;ldquo;Type&amp;rdquo; &amp;ldquo;opengraph&amp;rdquo;) .RelPermalink &amp;ldquo;opengraph&amp;rdquo;&amp;gt;: error calling partialCached: &amp;ldquo;E:\study means\Hugo\Sites\verynormal.org\themes\hugo-theme-stack\layouts\partials\helper\image.html:27:31&amp;rdquo;: execute of template failed: template: partials/helper/image.html:27:31: executing &amp;ldquo;partials/helper/image.html&amp;rdquo; at &amp;lt;index .Context.Site.Params.defaultImage .Type&amp;gt;: error calling index: index of untyped nil
+ERROR 2020/12/31 17:56:03 render of &amp;ldquo;taxonomy&amp;rdquo; failed: execute of template failed: template: _default/list.html:4:12: executing &amp;ldquo;_default/list.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/head.html&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/head.html:14:4: executing &amp;ldquo;partials/head/head.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/opengraph/include.html&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/opengraph/include.html:1:3: executing &amp;ldquo;partials/head/opengraph/include.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/opengraph/provider/base&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/opengraph/provider/base.html:40:13: executing &amp;ldquo;partials/head/opengraph/provider/base.html&amp;rdquo; at &amp;lt;partialCached &amp;ldquo;helper/image&amp;rdquo; (dict &amp;ldquo;Context&amp;rdquo; . &amp;ldquo;Type&amp;rdquo; &amp;ldquo;opengraph&amp;rdquo;) .RelPermalink &amp;ldquo;opengraph&amp;rdquo;&amp;gt;: error calling partialCached: &amp;ldquo;E:\study means\Hugo\Sites\verynormal.org\themes\hugo-theme-stack\layouts\partials\helper\image.html:27:31&amp;rdquo;: execute of template failed: template: partials/helper/image.html:27:31: executing &amp;ldquo;partials/helper/image.html&amp;rdquo; at &amp;lt;index .Context.Site.Params.defaultImage .Type&amp;gt;: error calling index: index of untyped nil
+Built in 9 ms
+Error: Error building site: failed to render pages: render of &amp;ldquo;home&amp;rdquo; failed: execute of template failed: template: index.html:4:12: executing &amp;ldquo;index.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/head.html&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/head.html:14:4: executing &amp;ldquo;partials/head/head.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/opengraph/include.html&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/opengraph/include.html:1:3: executing &amp;ldquo;partials/head/opengraph/include.html&amp;rdquo; at &amp;lt;partial &amp;ldquo;head/opengraph/provider/base&amp;rdquo; .&amp;gt;: error calling partial: execute of template failed: template: partials/head/opengraph/provider/base.html:40:13: executing &amp;ldquo;partials/head/opengraph/provider/base.html&amp;rdquo; at &amp;lt;partialCached &amp;ldquo;helper/image&amp;rdquo; (dict &amp;ldquo;Context&amp;rdquo; . &amp;ldquo;Type&amp;rdquo; &amp;ldquo;opengraph&amp;rdquo;) .RelPermalink &amp;ldquo;opengraph&amp;rdquo;&amp;gt;: error calling partialCached: &amp;ldquo;E:\study means\Hugo\Sites\verynormal.org\themes\hugo-theme-stack\layouts\partials\helper\image.html:27:31&amp;rdquo;: execute of template failed: template: partials/helper/image.html:27:31: executing &amp;ldquo;partials/helper/image.html&amp;rdquo; at &amp;lt;index .Context.Site.Params.defaultImage .Type&amp;gt;: error calling index: index of untyped nil&lt;/p&gt;
+&lt;p&gt;更换了其他theme未出现此问题
+——————————&lt;/p&gt;
+&lt;p&gt;建blog使用命令：
+hugo new site verynormal.org
+git clone &lt;a href=&#34;https://github.com/MeiK2333/github-style.git&#34;&gt;https://github.com/MeiK2333/github-style.git&lt;/a&gt; themes/github-style
+hugo new post/readme.md
+echo &amp;lsquo;&lt;code&gt;Hello World!&lt;/code&gt;&amp;rsquo; &amp;gt; content/readme.md
+hugo server -t githun-style &amp;ndash;buildDrafts
+cd themes/github-style
+git pull
+hugo &amp;ndash;theme=github-style &amp;ndash;baseUrl=&amp;ldquo;&lt;a href=&#34;https://jdhun.github.io/%22&#34;&gt;https://jdhun.github.io/&amp;quot;&lt;/a&gt; &amp;ndash;buildDrafts
+git init
+git add .
+git commit -m &amp;ldquo;我的Hugo博客第一次提交&amp;rdquo;
+git remote add origin &lt;a href=&#34;https://github.com/jdhun/jdhun.github.io.git&#34;&gt;https://github.com/jdhun/jdhun.github.io.git&lt;/a&gt;
+（若已存在之前的remote origin，则git remote rm origin进行删除）
+git push &amp;ndash;set-upstream origin master
+git push
+——————————
+尝试修一下blog的版面 弄好稍微好看一点点试试&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Readme</title>
       <link>https://jdhun.github.io/post/readme/</link>

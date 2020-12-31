@@ -155,7 +155,7 @@
                 </path>
               </svg>
               Posts
-              <span class="Counter">2</span>
+              <span class="Counter">3</span>
             </a>
           </nav>
           <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
@@ -383,7 +383,7 @@
         </path>
       </svg>
       Posts
-      <span class="Counter ">2</span>
+      <span class="Counter ">3</span>
     </a>
   </nav>
 </div>
@@ -394,6 +394,63 @@
     <div>
       
       <ul>
+        
+        <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
+          <div class="col-12 d-inline-block">
+            <div class="d-inline-block mb-1">
+              <h3 class="wb-break-all">
+                <a href="https://jdhun.github.io/post/first-day-summary/">First Day Summary</a>
+              </h3>
+            </div>
+
+            <div>
+              <div class="col-12 d-inline-block text-gray mb-2 pr-4">
+                <p>启动 hugo 报错：</p>
+<p>WARN 2018/11/23 14:56:39 Found no layout for &ldquo;home&rdquo;, language &ldquo;en&rdquo;, output format &ldquo;HTML&rdquo;: create a template below /layouts with one of these filenames: index.en.html.html, home.en.html.html, list.en.html.html, index.html.html, home.html.html, list.html.html, index.en.html, home.en.html, list.en.html, index.html, home.html, list.html, _default/index.en.html.html, _default/home.en.html.html, _default/list.en.html.html, _default/index.html.html, _default/home.html.html, _default/list.html.html, _default/index.en.html, _default/home.en.html, _default/list.en.html, _default/index.html, _default/home.html, _default/list.html</p>
+<p>推测似乎原因是
+hugo 找不到适合 home 的模板，后面跟着的一大串文件名是 hugo 查找模板的顺序。如果是网上的写好的主题，是不是没有指定对主题的路径啊？
+主题文件夹放在./themes/里，然后./config.toml 加一句`theme = &ldquo;主题名&rdquo;</p>
+<p>————
+使用hugo-theme-stack主题是发生错误：
+Start building sites …
+ERROR 2020/12/31 17:56:03 render of &ldquo;taxonomy&rdquo; failed: execute of template failed: template: _default/list.html:4:12: executing &ldquo;_default/list.html&rdquo; at &lt;partial &ldquo;head/head.html&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/head.html:14:4: executing &ldquo;partials/head/head.html&rdquo; at &lt;partial &ldquo;head/opengraph/include.html&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/opengraph/include.html:1:3: executing &ldquo;partials/head/opengraph/include.html&rdquo; at &lt;partial &ldquo;head/opengraph/provider/base&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/opengraph/provider/base.html:40:13: executing &ldquo;partials/head/opengraph/provider/base.html&rdquo; at &lt;partialCached &ldquo;helper/image&rdquo; (dict &ldquo;Context&rdquo; . &ldquo;Type&rdquo; &ldquo;opengraph&rdquo;) .RelPermalink &ldquo;opengraph&rdquo;&gt;: error calling partialCached: &ldquo;E:\study means\Hugo\Sites\verynormal.org\themes\hugo-theme-stack\layouts\partials\helper\image.html:27:31&rdquo;: execute of template failed: template: partials/helper/image.html:27:31: executing &ldquo;partials/helper/image.html&rdquo; at &lt;index .Context.Site.Params.defaultImage .Type&gt;: error calling index: index of untyped nil
+ERROR 2020/12/31 17:56:03 render of &ldquo;taxonomy&rdquo; failed: execute of template failed: template: _default/list.html:4:12: executing &ldquo;_default/list.html&rdquo; at &lt;partial &ldquo;head/head.html&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/head.html:14:4: executing &ldquo;partials/head/head.html&rdquo; at &lt;partial &ldquo;head/opengraph/include.html&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/opengraph/include.html:1:3: executing &ldquo;partials/head/opengraph/include.html&rdquo; at &lt;partial &ldquo;head/opengraph/provider/base&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/opengraph/provider/base.html:40:13: executing &ldquo;partials/head/opengraph/provider/base.html&rdquo; at &lt;partialCached &ldquo;helper/image&rdquo; (dict &ldquo;Context&rdquo; . &ldquo;Type&rdquo; &ldquo;opengraph&rdquo;) .RelPermalink &ldquo;opengraph&rdquo;&gt;: error calling partialCached: &ldquo;E:\study means\Hugo\Sites\verynormal.org\themes\hugo-theme-stack\layouts\partials\helper\image.html:27:31&rdquo;: execute of template failed: template: partials/helper/image.html:27:31: executing &ldquo;partials/helper/image.html&rdquo; at &lt;index .Context.Site.Params.defaultImage .Type&gt;: error calling index: index of untyped nil
+Built in 9 ms
+Error: Error building site: failed to render pages: render of &ldquo;home&rdquo; failed: execute of template failed: template: index.html:4:12: executing &ldquo;index.html&rdquo; at &lt;partial &ldquo;head/head.html&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/head.html:14:4: executing &ldquo;partials/head/head.html&rdquo; at &lt;partial &ldquo;head/opengraph/include.html&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/opengraph/include.html:1:3: executing &ldquo;partials/head/opengraph/include.html&rdquo; at &lt;partial &ldquo;head/opengraph/provider/base&rdquo; .&gt;: error calling partial: execute of template failed: template: partials/head/opengraph/provider/base.html:40:13: executing &ldquo;partials/head/opengraph/provider/base.html&rdquo; at &lt;partialCached &ldquo;helper/image&rdquo; (dict &ldquo;Context&rdquo; . &ldquo;Type&rdquo; &ldquo;opengraph&rdquo;) .RelPermalink &ldquo;opengraph&rdquo;&gt;: error calling partialCached: &ldquo;E:\study means\Hugo\Sites\verynormal.org\themes\hugo-theme-stack\layouts\partials\helper\image.html:27:31&rdquo;: execute of template failed: template: partials/helper/image.html:27:31: executing &ldquo;partials/helper/image.html&rdquo; at &lt;index .Context.Site.Params.defaultImage .Type&gt;: error calling index: index of untyped nil</p>
+<p>更换了其他theme未出现此问题
+——————————</p>
+<p>建blog使用命令：
+hugo new site verynormal.org
+git clone <a href="https://github.com/MeiK2333/github-style.git">https://github.com/MeiK2333/github-style.git</a> themes/github-style
+hugo new post/readme.md
+echo &lsquo;<code>Hello World!</code>&rsquo; &gt; content/readme.md
+hugo server -t githun-style &ndash;buildDrafts
+cd themes/github-style
+git pull
+hugo &ndash;theme=github-style &ndash;baseUrl=&ldquo;<a href="https://jdhun.github.io/%22">https://jdhun.github.io/&quot;</a> &ndash;buildDrafts
+git init
+git add .
+git commit -m &ldquo;我的Hugo博客第一次提交&rdquo;
+git remote add origin <a href="https://github.com/jdhun/jdhun.github.io.git">https://github.com/jdhun/jdhun.github.io.git</a>
+（若已存在之前的remote origin，则git remote rm origin进行删除）
+git push &ndash;set-upstream origin master
+git push
+——————————
+尝试修一下blog的版面 弄好稍微好看一点点试试</p>
+              </div>
+            </div>
+
+            <div class="f6 text-gray mt-2">
+              
+
+              Created
+              <relative-time datetime="Fri, 01 Jan 2021 00:13:37 &#43;0800" class="no-wrap"
+                title="Fri, 01 Jan 2021 00:13:37 &#43;0800">
+                Fri, 01 Jan 2021 00:13:37 &#43;0800
+              </relative-time>
+            </div>
+          </div>
+        </li>
         
         <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
           <div class="col-12 d-inline-block">
