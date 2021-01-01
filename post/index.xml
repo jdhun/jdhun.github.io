@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ASK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 01 Jan 2021 00:13:37 +0800</lastBuildDate><atom:link href="https://jdhun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 23:35:54 +0800</lastBuildDate><atom:link href="https://jdhun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day2</title>
+      <link>https://jdhun.github.io/post/day2/</link>
+      <pubDate>Fri, 01 Jan 2021 23:35:54 +0800</pubDate>
+      
+      <guid>https://jdhun.github.io/post/day2/</guid>
+      <description>上传修改后的文章命令测试 hugo &amp;ndash;theme=github-style &amp;ndash;baseUrl=&amp;ldquo;https://jdhun.github.io/&amp;quot;</description>
+    </item>
+    
     <item>
       <title>First Day Summary</title>
       <link>https://jdhun.github.io/post/first-day-summary/</link>
