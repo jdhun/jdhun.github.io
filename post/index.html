@@ -467,7 +467,14 @@
 
             <div>
               <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                上传修改后的文章命令测试 hugo &ndash;theme=github-style &ndash;baseUrl=&ldquo;https://jdhun.github.io/&quot;
+                上传修改后的文章命令测试结果：
+hugo new post/Day2.md
+hugo &ndash;theme=github-style &ndash;baseUrl=&ldquo;https://jdhun.github.io/&quot; &ndash;buildDrafts
+cd public/
+git add .
+git commit -m &ldquo;2021/1/1-23:40&rdquo;
+git push
+完毕
               </div>
             </div>
 

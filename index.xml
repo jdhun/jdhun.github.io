@@ -13,7 +13,14 @@
       <pubDate>Fri, 01 Jan 2021 23:35:54 +0800</pubDate>
       
       <guid>https://jdhun.github.io/post/day2/</guid>
-      <description>上传修改后的文章命令测试 hugo &amp;ndash;theme=github-style &amp;ndash;baseUrl=&amp;ldquo;https://jdhun.github.io/&amp;quot;</description>
+      <description>上传修改后的文章命令测试结果：
+hugo new post/Day2.md
+hugo &amp;ndash;theme=github-style &amp;ndash;baseUrl=&amp;ldquo;https://jdhun.github.io/&amp;quot; &amp;ndash;buildDrafts
+cd public/
+git add .
+git commit -m &amp;ldquo;2021/1/1-23:40&amp;rdquo;
+git push
+完毕</description>
     </item>
     
     <item>
