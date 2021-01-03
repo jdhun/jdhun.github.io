@@ -6,7 +6,16 @@
     <description>Recent content in Posts on ASK</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Jan 2021 14:37:15 +0800</lastBuildDate><atom:link href="https://jdhun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 17:10:04 +0800</lastBuildDate><atom:link href="https://jdhun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Day4</title>
+      <link>https://jdhun.github.io/post/day4/</link>
+      <pubDate>Sun, 03 Jan 2021 17:10:04 +0800</pubDate>
+      
+      <guid>https://jdhun.github.io/post/day4/</guid>
+      <description>继续昨天的内容</description>
+    </item>
+    
     <item>
       <title>Day3</title>
       <link>https://jdhun.github.io/post/day3/</link>
@@ -15,10 +24,23 @@
       <guid>https://jdhun.github.io/post/day3/</guid>
       <description>继续之前的内容
 根据过去对目标的信息搜集结果
-大致有以下信息；
-存在后台登陆地址 后台地址密码极其简单 且登录后跟主页内容无关 采用ewebeditor编辑器 通过扫描存在上传图片页面 并自动对上传图片改名 上传后地址为/456/upload 图片命名规则为2021（年）+1（月）+2（日）+15（时）+45（分）+37（秒）+.jpg 网站使用PHP架构，IIS8.5 服务器内部IP地址和端口：192.168.100.91:80 脚本超时时间300秒 站点物理路径： D:\vhostroot\LocalUser\kedu\www
-服务器解释引擎： VBScript/5.8.19573 制作者：随心 手机：18760051679 后台存在safedog
-当前问题： 爆破工具无法正常使用 需要了解一下如何对PHP一句话进行变形绕过safedog 查看教程16和17 讲解了改名绕过检测和一些上传工具比如lanker、XISE、C32Asm 但似乎未找到绕过上传改名的方法 打算寻找一下IIS8.5漏洞的文章 明天继续 啊</description>
+大致有以下信息：
+存在后台登陆地址 后台地址密码极其简单 且登录后跟主页内容无关
+采用ewebeditor编辑器
+通过扫描存在上传图片页面 并自动对上传图片改名 上传后地址为/456/upload 图片命名规则为2021（年）+1（月）+2（日）+15（时）+45（分）+37（秒）+.jpg
+网站使用PHP架构，IIS8.5
+服务器内部IP地址和端口：192.168.100.91:80
+脚本超时时间300秒
+站点物理路径： D:\vhostroot\LocalUser\kedu\www\
+服务器解释引擎： VBScript/5.8.19573
+制作者：随心
+手机：18760051679
+后台存在safedog
+当前问题： 爆破工具无法正常使用
+需要了解一下如何对PHP一句话进行变形绕过safedog
+查看教程16和17 讲解了改名绕过检测和一些上传工具比如lanker、XISE、C32Asm 但似乎未找到绕过上传改名的方法
+打算寻找一下IIS8.5漏洞的文章
+明天继续</description>
     </item>
     
     <item>
