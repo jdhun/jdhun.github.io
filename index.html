@@ -156,7 +156,7 @@
                 </path>
               </svg>
               Posts
-              <span class="Counter">4</span>
+              <span class="Counter">6</span>
             </a>
           </nav>
           <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
@@ -446,7 +446,7 @@
         </path>
       </svg>
       Posts
-      <span class="Counter ">4</span>
+      <span class="Counter ">6</span>
     </a>
   </nav>
 </div>
@@ -501,6 +501,128 @@
                       d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
                     </path>
                   </svg>
+                  <a class="text-bold flex-auto min-width-0" href="https://jdhun.github.io/post/day6/">
+                    <span class="repo" title="Day6">Day6</span>
+                  </a>
+                </div>
+
+
+                <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
+                  CentOS与Ubuntu的区别在于前者更适合服务器，后者而适合个人桌面
+安装Ubuntu 20，安装VMwareTool、python2.7、tor、git、sqlmap、curl等工具，除了tor，改变ip地址的还有IPchanger工具。
+国内因为GFW隔离的原因无法直接使用Tor服务，需要先使用VPN跨越GFW后，才能链接Tor服务器，最佳匿名策略是再套一层代理服务器。
+使用http://ifconfig.me 检测自己的外网地址
+tor默认port为9050
+curl &ndash;socks4a localhost:9050 http://ifconfig.me
+1，查找tor教程
+地址：https://www.bilibili.com/video/BV1mZ4y1P7Np?from=search&amp;seid=9655385627832367798
+教程步骤：
+确定当前tor状态：sudo service tor status
+安装代理sudo apt-get install privoxy
+编辑配置nano /etc/privoxy/config
+在配置中寻找forward-socks4a和forward-socks5t字段配置信息确保正确
+安装代理链sudo apt-get install proxychains
+然后编辑配置 nano /etc/proxychains.conf
+寻找socks4字段，在下方添加：socks5 127.0.0.1 9050
+编辑完成后，启动服务 sudo service tor start 检测当前IP状态：只需要在浏览器里搜索自己当前的IP即可
+教程中后续是 链接Firefox：proxychains firefox #此时教程演示中发生错误事件，连接网络失败，教程演示者重新编辑/etc/proxychains.conf配置，注释掉了socks5，再次链接Firefox，此次网络连接成功
+socks proxy checker
+                </div>
+
+                <p class="mb-0 f6 text-gray">
+                  
+                </p>
+              </div>
+            </div>
+          </li>
+          
+          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+            <div
+              class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
+              <div class="pinned-item-list-item-content">
+                <div class="d-flex width-full flex-items-center position-relative">
+                  <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+                    width="16" height="16">
+                    <path fill-rule="evenodd"
+                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+                    </path>
+                  </svg>
+                  <a class="text-bold flex-auto min-width-0" href="https://jdhun.github.io/post/day5/">
+                    <span class="repo" title="Day5">Day5</span>
+                  </a>
+                </div>
+
+
+                <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
+                  通过爬行，已知可打开网址后缀为
+/index.asp
+/special_offers.asp
+/dining.html
+/traffic.html
+/hotel_culture.html
+/456/admin/login.asp
+/room_reservation.html
+/hotel_photos.html
+/index.htm
+/location.html
+/hotel_awards_1.html
+/career.asp
+/views_1.html
+/spa.html
+/spa_detail_1.html
+/spa_detail_2.html
+/spa_detail_3.html
+/restaurant_1.html
+/restaurant_2.html
+/restaurant_3.html
+/restaurant_4.html
+/chefs_recommendation.html
+/456/admin/mail
+/virtual_tour_1.html
+/ktv.html
+/health_facilities.html
+/js/
+/public/calendar
+不知利用用途
+/js/=null&amp;&amp;(e.which=t.charCode!=null?t.charCode:t.keyCode),e}},mouseHooks:{props:
+/a
+/${url}
+/${img_src}
+/${small_pic}
+/${fields.small_pic}
+/js/{href}
+已测试方法 寻找默认ewebeditor列目录漏洞（失败）
+进行上传文件格式的改名，直接上传php文件失败（被防火墙拦截）；使用54645.php;jpg，失败；使用54645.php.a;.mp4.png..jpg，失败；使用54645.php5.a;.mp4.png..jpg，成功。说明未将PHP5列入禁止名单，预计php2-5均不在黑名单内。上传文件被系统修改名字为/456/upload/zd_20211722635.jpg。
+查看代码似乎可以在命名上进行闭合操作（不行）
+测试MDB文件默认位置路径（失败）
+下一步测试方案：
+因为网站基于ASP构建，采用了IIS，利用IIS不会对文件名中&quot;;&ldquo;之后内容不再分析的特性，打算使用改名的方式进行asp文件上传，若asp上传受阻，尝试asa、cer、cdx后缀，但目前的障碍在于ewebeditor的后续支持工具需要确定。（失败，服务器上另有FW检测上传文件名，asa、cer、cdx后缀皆不可行）
+————————按照针对UEditor的方法，抓包后在原文件名前添加一段X.asp来避免文件名被修改（失败）
+————————抓包后查看是前台改名还是后台改名（服务器端）
+使用新的IEtester后成功用IE6打开编辑器，发现图片上传按钮，但只能使用网页图片链接的方式，不能直接上传（暂无必要）
+/456/guest.asp?action=Add_New 存在留言板块可尝试一下留言区注入
+尝试是否能修改编辑器，对上传功能进行修改？ 尚未确定是否存在防火墙对上传文件的加载检测
+Ubuntu账号 姓名jjk 账号名jk
+                </div>
+
+                <p class="mb-0 f6 text-gray">
+                  
+                </p>
+              </div>
+            </div>
+          </li>
+          
+          <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+            <div
+              class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
+              <div class="pinned-item-list-item-content">
+                <div class="d-flex width-full flex-items-center position-relative">
+                  <svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 16 16" version="1.1"
+                    width="16" height="16">
+                    <path fill-rule="evenodd"
+                      d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+                    </path>
+                  </svg>
                   <a class="text-bold flex-auto min-width-0" href="https://jdhun.github.io/post/day4/">
                     <span class="repo" title="Day4">Day4</span>
                   </a>
@@ -508,7 +630,22 @@
 
 
                 <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
-                  继续昨天的内容
+                  只找到个IIS8.5的短文件名漏洞，可用性不大
+漏洞原理是：在IIS的web服务中，当我们有时无法直接访问一些文件时，尝试在地址栏中插入一个存在通配符* 和?的请求,当IIS接收到一个文件路径中包含~的请求时，根据文件是否存在，得到的返回值是不同的，我们可以利用这一点来猜测未知的文件名。
+1.短文件名产生背景 为了兼容16位MS-DOS程序，Windows为文件名较长的文件和文件夹生成了对应的DOS8.3短文件名。一般来说，文件名长度超过9位，就会显示短文件名。它允许远程攻击者在Web根目录下公开文件和文件夹名称（不应该可被访问）。攻击者可以找到通常无法从外部直接访问的重要文件，并获取有关应用程序基础结构的信息。
+2.短文件名命名格式 全部大写 显示6位 超过6位用~1表示 不显示特殊字符 后缀最多显示三位，其余的被截断
+例如：我们创建一个test.aspx的文件进行测试，猜测该文件的路径。
+首先，根据访问构造的某个存在的短文件名，会返回404可知，路径存在，且未知路径的最后一位是1；
+访问构造的某个不存在的短文件名时，会返回400。推断该路径的第一位不是字母c。
+3.短文件名漏洞利用
+手工猜解：根据文本第四部分的举例说明，手动输入相关字符，根据返回值的不同，对短文件名进行枚举猜解即可，很明显这种方式效率较低。
+工具利用：IIS_shortname_Scanner-master 用法及下载地址链接：https://github.com/irsdl/IIS-ShortName-Scanner
+4.短文件名漏洞局限性
+文件名只能猜6位，文件扩展名只能猜前3位。
+名称较短的文件是没有相应的短文件名的。
+需要iis和.net两个条件都满足。
+不支持文件名（或文件夹）是中文的猜测
+5.影响版本 IIS5.0-10.0全系列版本
                 </div>
 
                 <p class="mb-0 f6 text-gray">
@@ -542,19 +679,22 @@
 存在后台登陆地址 后台地址密码极其简单 且登录后跟主页内容无关
 采用ewebeditor编辑器
 通过扫描存在上传图片页面 并自动对上传图片改名 上传后地址为/456/upload 图片命名规则为2021（年）+1（月）+2（日）+15（时）+45（分）+37（秒）+.jpg
-网站使用PHP架构，IIS8.5
+网站使用ASP架构，IIS8.5
 服务器内部IP地址和端口：192.168.100.91:80
 脚本超时时间300秒
+编写语言：JavaScript
 站点物理路径： D:\vhostroot\LocalUser\kedu\www\
 服务器解释引擎： VBScript/5.8.19573
 制作者：随心
 手机：18760051679
 后台存在safedog
+邮箱：NetEase 标记语言HTML5
+字符编码UTF-8
 当前问题： 爆破工具无法正常使用
 需要了解一下如何对PHP一句话进行变形绕过safedog
 查看教程16和17 讲解了改名绕过检测和一些上传工具比如lanker、XISE、C32Asm 但似乎未找到绕过上传改名的方法
 打算寻找一下IIS8.5漏洞的文章
-明天继续
+居然因为少打了两个“-”卡了2小时。。。 明天继续
                 </div>
 
                 <p class="mb-0 f6 text-gray">
@@ -639,6 +779,18 @@ Start building sites … ERROR 2020/12/31 17:56:03 render of &ldquo;taxonomy&rdq
 
     
     <div class="mt-4 position-relative" id="contributions" data='[
+{
+  "title": "Day6",
+  "link": "https://jdhun.github.io/post/day6/",
+  "publishDate": "2021-01-11%2022:35:53"
+},
+
+{
+  "title": "Day5",
+  "link": "https://jdhun.github.io/post/day5/",
+  "publishDate": "2021-01-07%2020:00:20"
+},
+
 {
   "title": "Day4",
   "link": "https://jdhun.github.io/post/day4/",
